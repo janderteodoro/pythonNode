@@ -15,6 +15,7 @@ app.get('/',(req, res) => {
 
 routes.writescriptRoute(app, helper);
 routes.localScriptRoute({ app, spawn });
+routes.writeAndRun({ app, spawn, helper });
 
 app.listen(3001, () => {
   console.log('API started in http://localhost:3001');

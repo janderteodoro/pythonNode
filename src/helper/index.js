@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 const writeFile = ({ filename, data }) => {
-  fs.writeFile(filename, data, (error) => {
+  fs.writeFile(`body/${filename}`, data, (error) => {
     if (error) console.error(error);
     console.log(`${data} > ${filename}`);
   })
@@ -10,4 +10,3 @@ const writeFile = ({ filename, data }) => {
 module.exports = {
   writeFile
 };
-
